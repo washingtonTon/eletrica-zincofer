@@ -1,0 +1,11 @@
+{
+  "name": "eletrica-zincofer",
+  "version": "1.0.0",
+  "description": "Site Elétrica Zincofer",
+  "scripts": {
+    "start": "open src/index.html"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

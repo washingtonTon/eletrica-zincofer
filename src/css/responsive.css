@@ -1,0 +1,18 @@
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero {
+    padding-top: 120px;
+  }
+  
+  section {
+    padding: 60px 20px;
+  }
+}

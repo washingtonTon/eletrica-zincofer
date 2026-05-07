@@ -1,0 +1,223 @@
+.hero {
+  background-color: var(--color-coal);
+  padding: 80px 5%;
+}
+
+.botao {
+  background-color: var(--color-volt);
+  color: var(--color-coal);
+  padding: 16px 32px;
+  border-radius: 20px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 0 0 rgba(255, 214, 0, 0);
+  animation: ctaPulse 2s ease-in-out infinite;
+}
+
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 214, 0, 0.35); }
+  50% { box-shadow: 0 0 0 12px rgba(255, 214, 0, 0); }
+}
+
+
+.service-card {
+  background: var(--color-smoke);
+  border-radius: 24px;
+  padding: 30px;
+  border: 1px solid rgba(255, 214, 0, 0.12);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: rgba(255, 214, 0, 0.55);
+  box-shadow: 0 20px 60px rgba(255, 214, 0, 0.12);
+}
+
+.service-card:hover .service-icon-box {
+  border-color: rgba(255, 214, 0, 0.6);
+  box-shadow: 0 0 0 6px rgba(255, 214, 0, 0.07);
+}
+
+
+.hero-bg {
+  background: radial-gradient(1200px circle at 15% 10%, rgba(255, 214, 0, 0.12), transparent 40%),
+    radial-gradient(900px circle at 90% 30%, rgba(34, 197, 94, 0.10), transparent 45%),
+    var(--color-coal);
+}
+
+/* Ajuste para o cabeçalho fixo */
+section#home {
+  padding-top: 112px;
+}
+
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  text-align: center;
+  margin: 4rem 0 2.5rem;
+}
+.section-title span {
+  color: var(--color-volt);
+}
+
+.service-icon-box {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  background: rgba(255, 214, 0, 0.10);
+  border: 1px solid rgba(255, 214, 0, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.service-icon-box i {
+  width: 26px;
+  height: 26px;
+  color: var(--color-volt);
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: fadeUp 700ms ease forwards;
+}
+
+/* Sparkles no hero */
+.hero-sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #ffd600;
+  border-radius: 9999px;
+  opacity: 0;
+  animation: sparkle 3s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+}
+
+/* CTA glow (Solicitar Orçamento Agora) */
+.cta-pulse {
+  animation: ctaPulse 2s ease-in-out infinite;
+}
+
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 214, 0, 0.35); }
+  50% { box-shadow: 0 0 0 12px rgba(255, 214, 0, 0); }
+}
+
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.input-field {
+  width: 100%;
+  background: rgba(42, 42, 42, 0.7);
+  border: 1px solid rgba(255, 214, 0, 0.18);
+  border-radius: 16px;
+  padding: 14px 16px;
+  color: #fff;
+  outline: none;
+}
+.input-field::placeholder {
+  color: rgba(161, 161, 170, 0.75);
+}
+.input-field:focus {
+  border-color: rgba(255, 214, 0, 0.45);
+  box-shadow: 0 0 0 4px rgba(255, 214, 0, 0.08);
+}
+
+/* container do formulário */
+.contato-container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+.galeria-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 214, 0, 0.12);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+.galeria-item img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+@media (max-width: 1024px) {
+  .galeria-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .galeria-grid {
+    grid-template-columns: 1fr;
+  }
+  .galeria-item img {
+    height: 200px;
+  }
+}
+
+.float-whatsapp {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 50;
+  width: 66px;
+  height: 66px;
+  display: flex;
+  border-radius: 9999px;
+  align-items: center;
+  justify-content: center;
+}
+
+.float-whatsapp:hover {
+  transform: translateY(-2px);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr; /* No celular, um em cima do outro */
+  align-items: center;
+  gap: 30px;
+  overflow: hidden; /* Garante que nada saia da tela */
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    grid-template-columns: 1.2fr 0.8fr; /* No computador, divide em dois */
+    gap: 60px;
+  }
+}
+
+/* Garante que o H1 não seja maior que a largura da tela */
+h1 {
+  max-width: 100%;
+  word-wrap: break-word;
+}
+

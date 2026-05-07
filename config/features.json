@@ -1,0 +1,17 @@
+{
+  "canva": {
+    "enabled": true,
+    "animations": true,
+    "whatsapp": true,
+    "responsive": true
+  },
+  "contact": {
+    "whatsapp": "5511920113230",
+    "phone": "11920113230"
+  },
+  "services": [
+    "Instalações Elétricas",
+    "Troca de Disjuntores",
+    "Emergência 24h"
+  ]
+}
