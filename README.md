@@ -32,5 +32,3 @@ Site institucional (HTML/CSS/JS) para serviços elétricos 24h.
 ## Git / GitHub
 O repositório foi inicializado com git e inclui um commit das alterações do site.
 
----
-Feito por BlackboxAI (ajustes no layout e no envio do orçamento via WhatsApp).
