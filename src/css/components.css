@@ -205,7 +205,7 @@ section#home {
   grid-template-columns: 1fr; /* No celular, um em cima do outro */
   align-items: center;
   gap: 30px;
-  overflow: hidden; /* Garante que nada saia da tela */
+overflow: visible;
 }
 
 @media (min-width: 1024px) {
